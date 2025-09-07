@@ -1,0 +1,38 @@
+{
+  "name": "dhanu",
+  "version": "0.1.0",
+  "description": "Dhanu - local assistant (Design B scaffold).",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --windows nsis --x64"
+  },
+  "devDependencies": {
+    "electron": "^26.0.0",
+    "electron-packager": "^17.1.0",
+    "electron-builder": "^24.6.0"
+  },
+  "build": {
+    "appId": "com.nine.dhanu",
+    "productName": "Dhanu",
+    "files": [
+      "**/*"
+    ],
+    "directories": {
+      "buildResources": "build"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": false,
+      "perUser": true,
+      "createDesktopShortcut": "true",
+      "createStartMenuShortcut": "true"
+    }
+  }
+}
